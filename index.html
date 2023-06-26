@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#section-hero" class="navlinks">Home</a></li>
+                <li><a href="#" class="navlinks">About</a></li>
+                <li><a href="#" class="navlinks">Work</a></li>
+                <li><a href="#" class="navlinks">Contact</a></li>
+                
+            </ul>
+        </header>
+        <div class="section-hero" id="section-hero">
+            <img src="Images/stars.png" alt="stars" id="stars">
+            <img src="Images/moon.png" alt="moon" id="moon">
+            <img src="Images/mountains_behind.png" alt="mountains_behind" id="mountains_behind">
+            <h2 class="text" id="text">Moon Light</h2>
+            <a href="#about" class="btn" id="btn" >Explore</a>
+            <img src="Images/mountains_front.png" alt="mountains_front" id="mountains_front">
+        </div>
+        <div class="description-section" id="about">
+            <h2>Parallax Scrolling Website</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deleniti facilis magni recusandae, aliquam obcaecati amet, vitae quod atque totam eligendi, doloremque odit assumenda debitis! Ipsum praesentium sed nulla tempora ipsam similique ratione est voluptatibus qui eligendi unde sint molestiae vero molestias totam, architecto harum natus quo cum maxime <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil at eveniet mollitia in veniam, doloremque velit est vel nesciunt, sit soluta. Velit iusto dicta temporibus placeat. Nihil saepe distinctio nemo nostrum, soluta accusantium, fugiat quia consectetur mollitia asperiores perferendis aliquam illo optio magnam vero accusamus? Mollitia, optio. Vero quod facilis sit eos nulla repellat laborum unde error neque totam quam, sequi porro. Corrupti inventore cupiditate sed fugit maxime illo eligendi. <br><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos exercitationem quos quisquam ex corporis laborum suscipit aut perspiciatis laudantium. Cum, neque amet labore accusantium laborum ipsa voluptatibus eos odit sequi illum quam reiciendis modi atque. Voluptas assumenda maiores deserunt, iure accusantium et obcaecati! Saepe aut labore nulla deleniti maxime sint ducimus explicabo quam, deserunt possimus similique, necessitatibus corporis laborum officia? Sequi sint iste sapiente iusto. Voluptas laboriosam tempora dolor. <br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum officiis iste consectetur expedita laudantium iure a exercitationem vel pariatur. Iusto facere consectetur nihil facilis modi, totam saepe velit alias quas autem ipsa impedit explicabo harum? Quis totam alias quasi porro, veniam laborum, illum pariatur, laudantium nisi possimus a odio excepturi.<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil at eveniet mollitia in veniam, doloremque velit est vel nesciunt, sit soluta. Velit iusto dicta temporibus placeat. Nihil saepe distinctio nemo nostrum, soluta accusantium, fugiat quia consectetur mollitia asperiores perferendis aliquam illo optio magnam vero accusamus? Mollitia, optio. Vero quod facilis sit eos nulla repellat laborum unde error neque totam quam, sequi porro. Corrupti inventore cupiditate sed fugit maxime illo eligendi. <br><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos exercitationem quos quisquam ex corporis laborum suscipit aut perspiciatis laudantium. Cum, neque amet labore accusantium laborum ipsa voluptatibus eos odit sequi illum quam reiciendis modi atque. Voluptas assumenda maiores deserunt, iure accusantium et obcaecati! Saepe aut labore nulla deleniti maxime sint ducimus explicabo quam, deserunt possimus similique, necessitatibus corporis laborum officia? Sequi sint iste sapiente iusto. Voluptas laboriosam tempora dolor. <br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum officiis iste consectetur expedita laudantium iure a exercitationem vel pariatur. Iusto facere consectetur nihil facilis modi, totam saepe velit alias quas autem ipsa impedit explicabo harum? Quis totam alias quasi porro, veniam laborum, illum pariatur, laudantium nisi possimus a odio excepturi.<br><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos exercitationem quos quisquam ex corporis laborum suscipit aut perspiciatis laudantium. Cum, neque amet labore accusantium laborum ipsa voluptatibus eos odit sequi illum quam reiciendis modi atque. Voluptas assumenda maiores deserunt, iure accusantium et obcaecati! Saepe aut labore nulla deleniti maxime sint ducimus explicabo quam, deserunt possimus similique, necessitatibus corporis laborum officia? Sequi sint iste sapiente iusto. Voluptas laboriosam tempora dolor. <br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum officiis iste consectetur expedita laudantium iure a exercitationem vel pariatur. Iusto facere consectetur nihil facilis modi, totam saepe velit alias quas autem ipsa impedit explicabo harum? Quis totam alias quasi porro, veniam laborum, illum pariatur, laudantium nisi possimus a odio excepturi.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+        window.addEventListener('scroll' , function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight =  value* 4 + 'px';
+            text.style.marginTop =  value* 1.5 + 'px';
+            btn.style.marginTop =  value* 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';;
+
+            
+
+        })
+    </script>
+</body>
+</html>
