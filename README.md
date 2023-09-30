@@ -5,3 +5,6 @@ when the web page is scrolled creating the optical illusion of three-dimensional
 
 #About
 This is an amazing website showing the parallax effect created using HTML, CSS, and JS. The parallax effect can be achieved by using CSS properties such as z-index and position.
+
+
+<video src="screenshots/Recording%20.mp4" controls title="Title"></video>
