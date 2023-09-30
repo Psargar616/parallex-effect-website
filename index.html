@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Effect Website</title>
+    <title>Parallax Effect Website Demo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -41,6 +41,8 @@
         let btn = document.getElementById('btn');
         let mountains_front = document.getElementById('mountains_front');
         let header = document.querySelector('header')
+
+        // code to make elements move
         window.addEventListener('scroll' , function(){
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px';
